@@ -36,18 +36,20 @@ function Banner(){
         >
             <div className='banner__contents'>
                 <h1 className='banner__title'>
-                {movies ? movies.name || movies.title || "Loading..." : "Loading..."}
+                    {movies ? movies.name || movies.title || "Loading..." : "Loading..."}
                 </h1>
             
                 <div className='banner__buttons'>
-                    <button className='banner__buttons'>Play</button>
-                    <button className='banner__buttons'>My List</button>
+                    <button className='banner__button'>Play</button>
+                    <button className='banner__button'>My List</button>
                 </div>
 
                 <h1 className='banner__description'>
-                {movies? truncate(movies.overview, 150) : "...loading"}
+                    {movies? truncate(movies.overview, 150) : "...loading"}
                 </h1>
             </div>
+
+            <div className='banner__fadeBottom' />
         </header>
     );
 }
